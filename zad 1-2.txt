@@ -2,8 +2,8 @@ Działanie Programu:
 
 Komendy:
 mov - przypisuje nową wartość dla rejestru.
-add - dodaje wartość do rejestru lub dodaje dwa rejestry do siebie.
-sub - odejmuje wartość od rejestru lub odejmuje dwa rejestry od siebie.
+add - dodaje wartość do rejestru (może być to wartość z innego rejestru).
+sub - odejmuje wartość od rejestru (może być to wartość z innego rejestru).
 xor - sprawdza czy dwa rejestry mają różne wartości.
 
 Działanie:
