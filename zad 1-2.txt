@@ -1,0 +1,92 @@
+Działanie Programu:
+
+Komendy:
+mov - przypisuje nową wartość dla rejestru.
+add - dodaje wartość do rejestru lub dodaje dwa rejestry do siebie.
+sub - odejmuje wartość od rejestru lub odejmuje dwa rejestry od siebie.
+xor - sprawdza czy dwa rejestry mają różne wartości.
+
+Działanie:
+Przypisanie do rejestru "rax" wartość 12.
+Przypisanie do rejestru "rbx" wartość 7.
+Dodanie do rejestru "rax" wartość z rejestru "rbx".
+Odjęcie od rejestru "rax" 3.
+Przypisanie do rejestru "rcx" wartość z rejestru "rax".
+Dodanie do rejestru "rcx" 10.
+Przypisanie do rejestru "rdx" wartość z rejestru "rcx".
+Odjęcie od rejestru "rdx" 4.
+Przypisanie do rejestru "rax" wartość 60.
+Porównanie wartości z rejestrów "rdi"
+
+Rejestry:
+    start:
+        rax=0x0
+        rbx=0x0
+        rcx=0x0
+        rdx=0x0
+        rsi=0x0
+        rdi=0x0
+        rbp=0x0
+        rbp=0x0
+        rsp=0x7fffffffde20
+        r8=0x0
+        r9=0x0
+        r10=0x0
+        r11=0x0
+        r12=0x0
+        r13=0x0
+        r14=0x0
+        r15=0x0
+        rip=0x401000
+        eflags=0x202
+        eax=0x0
+        ebx=0x0
+        ecx=0x0
+        edx=0x0
+        esi=0x0
+        edi=0x0
+        ebp=0x0
+        esp=0xffffde20
+    mov rax, 12:
+        rax: 0x0 -> 0xc
+        rip: 0x401000 -> 0x401005
+        eax: 0x0 -> 0xc
+    mov rbx, 7:
+        rbx: 0x0 -> 0x7
+        rip: 0x401005 -> 0x40100a
+        ebx: 0x0 -> 0x7
+    add rax, rbx:
+        rax: 0xc -> 0x13
+        rip: 0x40100a -> 0x40100d
+        eflags: 0x202 -> 0x212
+        eax: 0xc -> 0x13
+    sub rax, 3:
+        rax: 0x13 -> 0x10
+        rip: 0x40100d -> 0x401011
+        eflags: 0x212 -> 0x202
+        eax: 0x13 -> 0x10
+    mov rcx, rax:
+        rcx: 0x0 -> 0x10
+        rip: 0x401011 -> 0x401014
+        ecx: 0x0 -> 0x10
+    add rcx, 10:
+        rcx: 0x10 -> 0x1a
+        rip: 0x401014 -> 0x401018
+        ecx: 0x10 -> 0x1a
+    mov rdx, rcx:
+        rdx: 0x0 -> 0x1a
+        rip: 0x401018 -> 0x40101b
+        edx: 0x0 -< 0x1a
+    sub rdx, 4:
+        rdx: 0x1a -> 0x16
+        rip: 0x40101b -> 0x40101f
+        edx: 0x1a -> 0x16
+    mov rax, 60:
+        rax: 0x10 -> 0x3c
+        rip: 0x40101f -> 0x401024
+        eax: 0x10 -> 0x3c
+    xor rdi, rdi:
+        rip: 0x401024 -> 0x401027
+        eflags: 0x202 -> 0x246
+    syscall:
+        koniec programu.

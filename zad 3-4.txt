@@ -1,0 +1,18 @@
+Zmiany:
+mov rax, 12 -> mov rax, 10
+mov rbx, 7 -> mov rbx, 5
+sub rax, 3 -> sub rax, 20
+Skutki:
+Przypisanie do rejestru "rax" wartość 10 (0xa).
+Przypisanie do rejestru "rbx" wartość 5 (0x5).
+Dodanie do rejestru "rax" wartości z rejestru "rbx" (wynik: 15 (0xf)).
+Odjęcie od rejestru "rax" wartość 20, wynik: 0xfffffffffffffffb
+
+Dodatki:
+mov rsi, 40
+add rsi, 20
+sub rsi, rax
+Skutki:
+Do rejestru "rsi" przypisano wartość 40 (rsi=0x28).
+Do rejestru "rsi" dodano wartość 20 (rsi=0x3c).
+Od rejestru "rsi" odjęto wartość z rejestru rax (równą 60), dając wynik 0 (rsi=0x0).

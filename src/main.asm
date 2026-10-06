@@ -2,10 +2,10 @@ global _start
 
 section .text
 _start:
-    mov rax, 12
-    mov rbx, 7
+    mov rax, 10
+    mov rbx, 5
     add rax, rbx
-    sub rax, 3
+    sub rax, 20
 
     mov rcx, rax
     add rcx, 10
@@ -15,4 +15,9 @@ _start:
 
     mov rax, 60
     xor rdi, rdi
+
+    mov rsi, 40
+    add rsi, 20
+    sub rsi, rax
+
     syscall
